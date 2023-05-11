@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestion de Location (SpringBoot)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-lg-1">
+
+        </div>
+        <div class="col-md-auto" align="center">
+
+            <h1 style="margin-top: 20px">Bienvenue sur la plateforme de gestion de location de Voiture</h1>
+            <img src="assets/images/background.jpg" width="700" height="450"  class="image"/>
+
+            <button><a th:href="@{/login}">Se Connecter</a> </button>
+
+            <button><a href="https://www.esgis.org/fr/">ESGIS</a> </button>
+
+        </div>
+        <div class="col col-lg-1">
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

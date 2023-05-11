@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="layout/default :: entete"></head>-->
+
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/default :: entete}"></head>
+
+<body>
+<!--<div th:replace="layout/default :: menu"></div>-->
+<div class="wrapper">
+	<div th:replace="~{layout/default :: menu}" ></div>
+
+	<div class="content-page">
+		<div class="content">
+
+			<!-- Start Content-->
+			<div class="container-fluid">
+
+				<!-- start page title -->
+				<div class="row">
+					<div class="col-10">
+						<div class="page-title-box">
+							<h4 class="page-title">Voiture</h4>
+						</div>
+					</div>
+				</div>
+				<!-- end page title -->
+
+				<div class="row">
+					<div class="col-xl-10">
+						<div class="card">
+							<div class="card-body">
+
+								<h4 class="header-title">Nouveau Voiture</h4>
+
+								<ul class="nav nav-tabs nav-bordered mb-3">
+
+
+								</ul>
+								<!-- end nav-->
+								<div class="tab-content">
+									<div class="tab-pane show active" id="table-head-preview">
+										<div class="mb-3">
+
+											<div align="center">
+
+												<form th:action="@{/voiture/saveVoiture}" th:object="${voiture}"
+													  method="POST">
+													<table class="table" style="width: 60%">
+														<input type="hidden" th:field="*{id}" />
+
+														<tr>
+															<th>Numero Matricule : </th>
+															<td>
+
+																<input type="text" th:field="*{numMat}"
+																	   class="form-control mb-1 col-4" />
+															</td>
+														</tr>
+
+														<tr>
+															<th>Marque : </th>
+															<td>
+																<input type="text" th:field="*{marque}"  class="form-control mb-1 col-4"    >
+															</td>
+														</tr>
+
+														<tr>
+															<th>Date Aquisition : </th>
+															<td>
+																<input type="text" th:field="*{dateAquisition}"  class="form-control mb-1 col-4"  />	</td>
+
+														</tr>
+														<tr>
+
+															<td>
+																<!--																<input class="btn btn-info" type="submit" value="Enregistrer" />-->
+																<button type="submit" class="btn btn-info"> Update Voiture</button>
+															</td>
+														</tr>
+
+													</table>
+												</form>
+											</div>
+											<hr>
+
+											<a th:href = "@{/voiture/}"> Back to Voiture List</a>
+
+										</div>
+										<!-- end preview-->
+									</div>
+									<!-- end card body-->
+
+								</div>
+								<!-- end tab-content-->
+
+
+
+								<!-- end card -->
+							</div>
+							<!-- end col-->
+
+
+						</div></div>
+				</div>
+			</div>
+		</div>
+	</div></div>
+<!-- Vendor js -->
+<script src="../assets/js/vendor.min.js"></script>
+
+<!-- Code Highlight js -->
+<script src="../assets/vendor/highlightjs/highlight.pack.min.js"></script>
+<script src="../assets/vendor/clipboard/clipboard.min.js"></script>
+<script src="../assets/js/hyper-syntax.js"></script>
+
+<!-- App js -->
+<script src="../assets/js/app.min.js"></script>
+</body>
+</html>
+
+
